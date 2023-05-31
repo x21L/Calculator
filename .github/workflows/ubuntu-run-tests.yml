@@ -16,11 +16,3 @@ jobs:
           cache: maven
       - name: Test with Maven
         run: mvn clean test
-      - name: Check Test Results
-        run: |
-          if [ $? -eq 0 ]; then
-            echo "Tests passed"
-          else
-            echo "Tests failed"
-            failure
-          fi
